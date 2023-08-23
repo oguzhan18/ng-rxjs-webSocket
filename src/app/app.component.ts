@@ -7,7 +7,8 @@ import {WebSocketService} from "./service/web-socket.service";
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-    socketData: any;
+    public date: number = Date.now();
+    public socketData:any;
 
     constructor(private webSocketService: WebSocketService) {
     }
@@ -22,4 +23,9 @@ export class AppComponent implements OnInit {
             }
         );
     }
+
+    getColorClass(value: number): string {
+        return value > 0 ? 'green' : value < 0 ? 'red' : 'orange';
+    }
+
 }

@@ -5,7 +5,7 @@ import { webSocket } from 'rxjs/webSocket';
   providedIn: 'root'
 })
 export class WebSocketService {
-  private socket$;
+  public socket$;
 
   constructor() {
     this.socket$ = webSocket('wss://stream.binance.com:9443/ws/btcusdt@bookTicker');
@@ -15,3 +15,5 @@ export class WebSocketService {
     return this.socket$;
   }
 }
+
+

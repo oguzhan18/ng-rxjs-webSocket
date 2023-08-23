@@ -1,5 +1,6 @@
+
 <div class="container mt-4">
-    <h2>RxJS WebSocket Usage Example </h2>
+    <h2>RxJS WebSocket Usage Example</h2>
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -13,12 +14,17 @@
         <tbody>
         <tr>
             <td>{{ socketData?.s }}</td>
-            <td>{{ socketData?.b }}</td>
-            <td>{{ socketData?.B }}</td>
-            <td>{{ socketData?.a }}</td>
-            <td>{{ socketData?.A }}</td>
+            <td [ngClass]="getColorClass(socketData?.b)">{{ socketData?.b }}</td>
+            <td [ngClass]="getColorClass(socketData?.B)">{{ socketData?.B }}</td>
+            <td [ngClass]="getColorClass(socketData?.a)">{{ socketData?.a }}</td>
+            <td [ngClass]="getColorClass(socketData?.A)">{{ socketData?.A }}</td>
         </tr>
         </tbody>
     </table>
 </div>
+<footer class="footer mt-auto py-3 bg-light">
+    <div class="container text-center">
+        <span class="text-muted">© {{date | date:'yyyy'}} Oğuzhan ÇART. All rights reserved.</span>
+    </div>
+</footer>
 
