@@ -1,4 +1,4 @@
-<p align="center"><img src="src/favicon.ico" align="center" width="150"></p>
+<p align="center"><img src="src/favicon.ico" align="center" width="450"></p>
 
  
 # <p align="center"> How to use RXJS WebSocket in Angular  </p>
